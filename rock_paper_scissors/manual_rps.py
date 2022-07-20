@@ -50,7 +50,7 @@ class rock_paper_scissors:
         #print(f"User choice: {out}")
         return out 
 
-def play_game(rps_list):
+def play(rps_list):
     game = rock_paper_scissors(rps_list, num_lives=0)
     while game.num_lives<= 3 and game.pcnum_lives<= 3:
         a=game.get_computer_choice()
@@ -72,7 +72,7 @@ def play_game(rps_list):
 
 if __name__ == '__main__':
     rps_list = ['Rock','Paper','Scissors']
-    play_game(rps_list)
+    play(rps_list)
 
 
   
