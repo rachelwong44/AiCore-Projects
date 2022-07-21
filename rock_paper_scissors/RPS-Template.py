@@ -14,10 +14,15 @@ while True:
     prediction = model.predict(data)
     cv2.imshow('frame', frame)
     # Press q to close the window
-    print(prediction)
+    #print(prediction)
+    predicted=[max(i) for i in prediction]
+    print(f'Print largest probability: {predicted}')
+    print(f'Print index of largest probability: {np.argmax(prediction[0])}')
+    #if cv2.waitKey(0):
+        #break
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-            
+        
 # After the loop release the cap object
 cap.release()
 # Destroy all the windows
