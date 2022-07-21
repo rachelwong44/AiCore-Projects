@@ -51,7 +51,7 @@ class rock_paper_scissors:
         return out 
 
 def play(rps_list):
-    game = rock_paper_scissors(rps_list, num_lives=0)
+    game = rock_paper_scissors(rps_list, num_lives=0, pcnum_lives=0)
     while game.num_lives<= 3 and game.pcnum_lives<= 3:
         a=game.get_computer_choice()
         print("Please input from keyboard R=Rock, P=Paper, S=Scissors")
