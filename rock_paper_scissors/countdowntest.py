@@ -3,12 +3,8 @@ from os import times
 import time
 from turtle import end_poly
 
-
-#def countdown(self): 
-
 start=time.time()
 start_sec=time.time()
-#seconds=3
 time_elapsed=[]
 
 def countdown():

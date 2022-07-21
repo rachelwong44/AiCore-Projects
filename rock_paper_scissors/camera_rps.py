@@ -16,17 +16,31 @@ class rock_paper_scissors:
         self.rps_list=rps_list
         self.rps_list=['Rock', 'Paper', 'Scissors']
         self.pcnum_lives=pcnum_lives
+        self.start=time.time()
+        time_elapsed=[]
 
-        def countdown(self, count): 
-            seconds=3
-            start=time.time()
-            while seconds >0:
-                end=time.time()
-                if start >= end:
-                    seconds= seconds -1
-                    final_time = end
-                    return final_time
-
+        def countdown(self): 
+            while True:
+                    end=time.time()
+                    time_elapsed=(round(end-self.start,1))
+                    #print(time_elapsed)
+                    if time_elapsed == 1:
+                        #print(f'One')
+                        print(f'{time_elapsed}s')
+                        break
+            while True:
+                    end=time.time()
+                    time_elapsed=(round(end-self.start,1))
+                    if time_elapsed == 2:
+                        end_sec=time.time()
+                        print(f'{time_elapsed}s')
+                        break
+            while True:
+                    end=time.time()
+                    time_elapsed=(round(end-self.start,1))
+                    if time_elapsed == 3:
+                        print(f'{time_elapsed}s')
+                        break 
 
 
         def get_prediction(self):         #return output of model with probabilities = confidence - pick highest probability
